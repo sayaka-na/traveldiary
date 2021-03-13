@@ -104,8 +104,6 @@
               <li class="dropdown-item"><%= link_to '新規作成', new_post_path, class: 'dropdown-link' %></li>
               <li class="dropdown-divider"></li>
               <li class="dropdown-item"><%= link_to 'ログアウト', logout_path, method: :delete, class: 'dropdown-link' %></li>
-              <li class="dropdown-item"><%= link_to '退会', @user, method: :delete, data: { confirm: "本当に退会しますか？" }, class: 'dropdown-link' %></li>
-              
             </ul>
           </li>
           <% else %>
