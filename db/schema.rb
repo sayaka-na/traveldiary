@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_13_075615) do
+ActiveRecord::Schema.define(version: 2021_03_13_140602) do
 
   create_table "posts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2021_03_13_075615) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "profile_image"
+    t.json "profile_image"
   end
 
   add_foreign_key "posts", "users"

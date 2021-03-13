@@ -6,7 +6,7 @@
   <div class="container">
     <h2 class="login-title mb-4 pt-4">会員登録ページ</h2>
     <div class="row text-center">
-      <div class="col-sm-6 offset-sm-3">
+      <div class="col-md-8 offset-md-2">
         
         <%= form_with(model: @user, local: true) do |f| %>
         <%= render 'layouts/error_messages', model: f.object %>
@@ -42,7 +42,7 @@
           </div>
           <div class="field">
             <%= f.label :profile_image, 'プロフィール画像' %>
-            <%= f.file_field :profile_image, multiple: true %>
+            <%= f.file_field :profile_image %>
           </div>
           <div class="form-btn my-4 py-4">
             <%= f.submit '登録', class: 'btn btn-success btn-block' %>
