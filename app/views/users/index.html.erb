@@ -11,7 +11,11 @@
           <div class="user-list">
             <ul class="list-group list-group-flush">
               <li class="d-flex list-group-item list-group-item-action list-group-item-light">
-                <img src="/assets/okinawa.jpg" alt="写真">
+                <% if user.profile_image? %>
+                  <%= image_tag user.profile_image.to_s, :class => "profile_image", :alt => 'プロフィール画像' %>
+                <% else %>
+                  <%= image_tag "/assets/default.png", :class => "profile_image", :alt => 'プロフィール画像' %>
+                <% end %>
                 <h5><%= user.nickname %></h5>
                 <span class="post-count">投稿数10/いいね数</span>
                 <p class="">from: 大阪</p>
