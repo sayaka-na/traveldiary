@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
+  get 'posts/index'
+  get 'posts/show'
+  get 'posts/new'
+  get 'posts/create'
+  get 'posts/edit'
+  get 'posts/update'
+  get 'posts/destroy'
   root to: 'homes#index'
 
   get 'login', to: 'sessions#new'
@@ -10,4 +14,6 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   resources :users
+
+  resources :posts
 end
