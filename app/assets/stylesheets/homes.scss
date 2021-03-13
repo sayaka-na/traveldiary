@@ -165,12 +165,15 @@ h2 {
   }
 }
 @media (max-width: 768px) {
-  .home-image-title {
+  .top-title {
     top: 20%;
     left: 3%;
-    right: 3%;
+    right: 30%;
   }
-  .home-image-title p {
+  .top-title h2 {
+    font-size: 26px;
+  }
+  .top-title p {
     font-size: 15px;
   }
   .fa-image {
@@ -186,5 +189,15 @@ h2 {
 
 }
 @media (max-width: 576px) {
-  
+  .top-title {
+    top: 20%;
+    left: 3%;
+    right: 5%;
+  }
+  .top-title h2 {
+    font-size: 22px;
+  }
+  .top-title p {
+    font-size: 12px;
+  }
 }
