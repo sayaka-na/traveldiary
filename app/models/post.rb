@@ -4,4 +4,7 @@ class Post < ApplicationRecord
   validates :title, presence: true, length: { maximum: 20 }
   validates :subject, presence: true, length: { maximum: 30 }
   validates :content, presence: true, length: { maximum: 255 }
+  validates :images, presence: true
+  
+  mount_uploaders :images, ImageUploader
 end

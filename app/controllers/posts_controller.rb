@@ -37,16 +37,17 @@ class PostsController < ApplicationController
     end
   end
   def destroy
+    @post = Post.find(params[:id])
     @post.destroy
     flash[:success] = 'メッセージを削除しました。'
-    redirect_back(fallback_location: root_path)
+    redirect_to root_url
   end
 
   private
 
   
   def post_params
-    params.require(:post).permit(:content, :title, :subject)
+    params.require(:post).permit(:content, :title, :subject, { images: [] })
   end
 
   def correct_user
