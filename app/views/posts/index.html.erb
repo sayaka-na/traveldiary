@@ -24,7 +24,7 @@
                         <!-- カードbody -->
                         <div class="col-8 p-1 p-sm-2">
                           <div class="card-body p-0">
-                            <div class="card-titleContent mb-4">
+                            <div class="card-titleContent mb-1 mb-sm-4">
                               <%= link_to post.title, post_path(post), class: 'card-index-title' %>
                               <p class="card-content m-0"><%= post.subject %></p>
                             </div>  
@@ -32,8 +32,9 @@
                             <div class="d-flex card-user">
                               <div class="card-user-img">
                                 <img src="/assets/okinawa.jpg" alt="写真">
+                                <div class="card-user-nickname"><%= post.user.nickname %></div>
                               </div>
-                              <div class="card-user-nickname"><%= post.user.nickname %></div>
+                              
                               <div class="card-user-time ms-auto p-md-2">
                                 <span class="favorite-icon mt-2"><i class="far fa-heart"></i></span>
                                 <small class="text-muted"><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></small>
