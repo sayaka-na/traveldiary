@@ -5,7 +5,7 @@
 <div class="posts-index">
   <div class="container">
     <div class="new-title mb-4 py-4">
-      <h1>最新クチコミ</h1>
+      <h1>お気に入り一覧</h1>
     </div>
   </div>
 
@@ -13,7 +13,7 @@
     <div class="container">
       <div class="row d-flex align-items-start">
         <div class="row col-lg-9 m-0">
-          <% @posts.each do |post| %>
+          <% @likes.each do |post| %>
               <div class="card-group">
                 <div class="row card mb-3" style="max-width: 700px;">
                   <div class="row no-gutters pr-0">
@@ -145,7 +145,7 @@
         </div>   
       </div>
       <div class="paginate">
-        <%= paginate @posts %>
+        <%= paginate @likes %>
       </div>
       <hr>
       <div class="index-link my-4 py-4">
