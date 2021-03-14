@@ -27,12 +27,11 @@
   border-radius: 50%;
   border: 1px solid rgb(110, 109, 109);
 }
-
 .post-image img {
   width:100%;
   max-height: 300px;
   object-fit: contain;
-}  
+} 
 // ==post2=================
 #post2 {
   font-family: serif;
@@ -43,13 +42,18 @@
 .post2-title {
   display: inline-block;
 }
-
-.post2-user img {
+// .post2-user {
+//   display: flex;
+//   justify-content: center;
+// }
+.profile_image {
   border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
-  width:  30px;       /* ※縦横を同値に */
-  height: 30px;       /* ※縦横を同値に */
+  width:  40px;       /* ※縦横を同値に */
+  height: 40px;       /* ※縦横を同値に */
 }
 .post2-user span {
+  display: block;
+  text-align: center;
   font-size: 1.5rem;
 }
 // ==コメント=============================
@@ -96,6 +100,14 @@
   .carousel-item img {
     max-height: 312px;
   }
+  .post2-user img {
+    width:  30px;       /* ※縦横を同値に */
+    height: 30px;       /* ※縦横を同値に */
+    margin-top: 10px;
+  }
+  .post2-user span {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 992px) {
   .carousel-item img {
@@ -113,11 +125,14 @@
   .post2-subject {
     font-size: 15px;
   }
+  // .post2-user {
+  //   align-content: center;
+  // }
   .post2-comment {
     font-size: 15px;
   }
   .post2-user span {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 576px) {
@@ -135,8 +150,7 @@
     font-size: 10px;
   }
   .post2-user span {
-    display: block;
-    font-size: 1rem;
+    font-size: .6rem;
   }
   .post2-user img {
     width:  20px;       /* ※縦横を同値に */

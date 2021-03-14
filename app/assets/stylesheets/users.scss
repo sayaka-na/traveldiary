@@ -18,17 +18,24 @@ img {
 }
 .userIndex h3 {
   background-color: rgb(229, 245, 250);
-  padding: 5px 10px;
+  padding: 10px 10px;
 }
 // ==リストグループ==============================
+.post-item {
+  display: block;
+  justify-content: right;
+}
+.post-from {
+  margin-top: 10px;
+}
 .post-count {
-  margin-left: auto;
+  font-size: 18px;
 }
-.list-group-item >:last-child {
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: 0;
-}
+// .list-group-item >:last-child {
+//   margin-left: auto;
+//   margin-top: auto;
+//   margin-bottom: 0;
+// }
 .list-group-item {
   align-items: center;
 }

@@ -17,8 +17,10 @@
                   <%= image_tag "/assets/default.png", :class => "profile_image", :alt => 'プロフィール画像' %>
                 <% end %>
                 <h5><%= user.nickname %></h5>
-                <span class="post-count">投稿数10/いいね数</span>
-                <p class="">from: 大阪</p>
+                <div class="post-item ml-auto">
+                  <span class="post-count">投稿数10/いいね数</span>
+                  <p class="post-from">from: 大阪</p>
+                </div>  
               </li>  
             </ul>
           </div>
