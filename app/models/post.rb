@@ -7,5 +7,9 @@ class Post < ApplicationRecord
   validates :images, presence: true
   
   has_many :favorites, dependent: :destroy
+  has_many :likers, through: :favorites, source: :user
+  
+  
+  
   mount_uploaders :images, ImageUploader
 end

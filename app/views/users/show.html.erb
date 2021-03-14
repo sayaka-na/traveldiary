@@ -20,7 +20,7 @@
           <p class="">ペンネーム：<%= @user.nickname %></p>
           <p class="">メールアドレス：<%= @user.email %></p>
           <%= link_to "プロフィール編集", edit_user_path(@user), class: 'btn btn-outline-success' %>
-          <small class="username-favorites mx-3">いいね数/投稿</small>
+          <small class="username-favorites mx-3">いいね数<span class="badge badge-secondary"><%= @count_favorites %></span>/投稿<span><%= @count_posts %></span></small>
         </div>
       </div>
     </div>

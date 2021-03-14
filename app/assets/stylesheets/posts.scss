@@ -21,6 +21,12 @@ a:hover {
   width: 90%;
 }
 // ================================
+
+.card-img-top {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+}
 .posts-index {
   font-family: serif;
   line-height: 1.6;
@@ -30,9 +36,7 @@ a:hover {
   padding: 5px 10px;
 }
 // カード===================================
-.card-img {
-  width: 100%;
-}
+
 .card-index-title {
   text-decoration: none;
   font-size: 22px;
@@ -44,8 +48,12 @@ a:hover {
 }
 
 .favorite-icon {
+  font-size: 18px;
   display: inline-block;
   margin: 3px 5px;
+}
+.fa-heart {
+  margin-right: 3px;
 }
 .card-body img {
   border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
@@ -92,6 +100,18 @@ a:hover {
   .card-index-title {
     font-size: 15px;
   }
+  .card-img-top {
+    max-height: 120px;
+  }
+  .card-user-nickname {
+    font-size: 15px;
+  }
+  .favorite-icon {
+    font-size: 15px;
+  }
+  .fa-heart {
+    margin-right: 2px;
+  }
   // card-subject
   .card-body p {
     font-size: 12px;
@@ -106,9 +126,17 @@ a:hover {
   .card-index-title {
     font-size: 12px;
   }
+  .card-img-top {
+    max-height: 110px;
+  }
   // card-subject
   .card-body p {
     font-size: 10px;
+  }
+  .card-user-time {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
   }
   .card-user-nickname {
     font-size: 10px;
@@ -116,7 +144,6 @@ a:hover {
   .favorite-icon {
     display: inline-block;
     font-size: 10px;
-    margin: 0;
   }
   .text-muted {
     font-size: 10px;
@@ -130,5 +157,13 @@ a:hover {
 @media (max-width: 575px) {
   .card-user {
     flex-wrap: wrap;
+  }
+  .card-body img {
+    width:  16px;       /* ※縦横を同値に */
+    height: 16px;       /* ※縦横を同値に */   
+    margin: 0px;
+  }
+  .text-muted {
+    align-items: center;
   }
 }

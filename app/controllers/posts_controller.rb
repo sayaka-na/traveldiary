@@ -43,6 +43,11 @@ class PostsController < ApplicationController
     redirect_to root_url
   end
 
+  def likers
+    @post = Post.find(params[:id])
+    @likers = @post.likers.page(params[:page])
+  end
+
   private
 
   

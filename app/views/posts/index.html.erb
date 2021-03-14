@@ -15,43 +15,41 @@
         <div class="row col-lg-9 m-0">
           <% @posts.each do |post| %>
               <div class="card-group">
-                <div class="row">
-                  <div class="card mb-3" style="max-width: 700px;">
-                    <div class="row no-gutters">
-                        <div class="col-4 my-auto">
-                          <%= image_tag post.images[0].to_s %>
-                        </div>
-                        <!-- カードbody -->
-                        <div class="col-8 p-1 p-sm-2">
-                          <div class="card-body p-0">
-                            <div class="card-titleContent mb-1 mb-sm-4">
-                              <%= link_to post.title, post_path(post), class: 'card-index-title' %>
-                              <p class="card-content m-0"><%= post.subject %></p>
-                            </div>  
-                            <!-- カードuser -->
-                            <div class="d-flex card-user">
-                              <div class="card-user-img">
-                                <img src="/assets/okinawa.jpg" alt="写真">
-                                <div class="card-user-nickname"><%= post.user.nickname %></div>
-                              </div>
-                              
-                              <div class="card-user-time ms-auto p-md-2">
-                                <span class="favorite-icon mt-2"><i class="far fa-heart"></i></span>
-                                <small class="text-muted"><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></small>
-                              <% if current_user == post.user %>
-                                <%= link_to post, class: "btn btn-light btn-sm", method: :delete, data: { confirm: "本当に削除しますか？" } do %><i class="far fa-trash-alt"></i>
-                                <% end %>
-                              <% end %>
-                              </div>
+                <div class="row card mb-3" style="max-width: 700px;">
+                  <div class="row no-gutters pr-0">
+                      <div class="col-4 my-auto">
+                        <%= image_tag post.images[0].to_s, class: 'card-img-top' %>
+                      </div>
+                      <!-- カードbody -->
+                      <div class="col-8 p-1 p-lg-2">
+                        <div class="card-body p-0">
+                          <div class="card-titleContent mb-1 mb-sm-4">
+                            <%= link_to post.title, post_path(post), class: 'card-index-title' %>
+                            <p class="card-content m-0"><%= post.subject %></p>
+                          </div>  
+                          <!-- カードuser -->
+                          <div class="d-flex card-user m-0">
+                            <div class="card-user-img">
+                              <img src="/assets/okinawa.jpg" alt="写真">
+                              <div class="card-user-nickname"><%= post.user.nickname %></div>
                             </div>
-                            <!-- カードuser -->
+                              
+                            <div class="card-user-time ms-auto p-md-2">
+                              <span class="favorite-icon mt-sm-2"><i class="far fa-heart"></i><%= post.likers.count %></span>
+                              <small class="text-muted"><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></small>
+                            <% if current_user == post.user %>
+                              <%= link_to post, class: "btn btn-light btn-sm", method: :delete, data: { confirm: "本当に削除しますか？" } do %><i class="far fa-trash-alt"></i>
+                              <% end %>
+                            <% end %>
+                            </div>
                           </div>
+                          <!-- カードuser -->
                         </div>
-                        <!-- カードbody 終了 -->
-                    </div>
+                      </div>
+                      <!-- カードbody 終了 -->
                   </div>
-                </div>
-              </div>
+                </div><!-- row card 終了 -->
+              </div><!-- カードgroup 終了 -->
           <% end %>
         </div>
 
