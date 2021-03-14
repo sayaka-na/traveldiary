@@ -6,5 +6,6 @@ class Post < ApplicationRecord
   validates :content, presence: true, length: { maximum: 255 }
   validates :images, presence: true
   
+  has_many :favorites, dependent: :destroy
   mount_uploaders :images, ImageUploader
 end
