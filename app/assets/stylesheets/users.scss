@@ -25,12 +25,17 @@ img {
   display: block;
   justify-content: right;
 }
-.post-from {
-  margin-top: 10px;
-}
 .post-count {
   font-size: 18px;
 }
+
+.post-count span {
+  margin: 0px 5px;
+}
+.post-from {
+  margin-bottom: 0px;
+}
+
 // .list-group-item >:last-child {
 //   margin-left: auto;
 //   margin-top: auto;

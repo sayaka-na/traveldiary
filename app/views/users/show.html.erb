@@ -41,7 +41,7 @@
                 </div> 
                 <div class="post-list-right">
                   <%= link_to '編集', edit_post_path(post), class: 'btn btn-outline-success btn-sm' %>
-                  <span class="post-list-favorite mt-2 mx-md-3"><i class="far fa-heart"></i></span>
+                  <span class="post-list-favorite mt-2 mx-md-3"><i class="far fa-heart"></i><%= post.likers.count %></span>
                   <small class="post-list-time"><%= post.updated_at.strftime("%Y-%m-%d %H:%M") %></small>
                 </div>  
                 </li>
